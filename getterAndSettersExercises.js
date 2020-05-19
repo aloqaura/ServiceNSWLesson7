@@ -18,6 +18,7 @@
 // }
 // let sq = new Square(10);
 // console.log(sq.area);
+// console.log(new Square(10).area)
 
 /* 3 Create a setter for area that sets the sideLength for the given area (hint, use the Math.sqrt function to retrieve the square root of the area and assign it as the sideLength) */
 // class Square {

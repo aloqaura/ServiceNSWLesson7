@@ -36,7 +36,7 @@
 // }    
 
 // class Student extends Person {
-//     constructor(grades) {
+//     constructor(firstName, lastName, age, grades) {
 //         super.Person(firstName, lastName, age);
 //         this.grades = grades;
 //     }
@@ -164,6 +164,68 @@
 // ]);
 
 /* 7 Create a method inside Teacher that calculates the average grade across all of their students and returns it as a number. */
+// class Person {
+//     constructor(firstName, lastName, age) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+
+//     getInfo() {
+//         return `${this.firstName} ${this.lastName} ${this.age}`;
+//     }
+// }
+
+// class Student extends Person {
+//     constructor(firstName, lastName, age, grades) {
+//         super (firstName, lastName, age);
+//         this.grades = grades;
+//     }
+
+//     averageGrade() {
+//         let sum = 0
+//         for (let i = 0; i < this.grades.length; i++) {
+//             sum += this.grades[i];
+//         }
+//         let avg = sum/this.grades.length;
+//         return avg;
+//     }
+//     getInfo() {
+//         return super.getInfo() + ` and their average grade is ${this.averageGrade()}`;
+//     }
+//     }
+
+// let grades = [90, 24, 45, 67, 78];
+// let grade = new Student("Alex", "Burgess", 21, grades);
+
+// class Teacher extends Person {
+//     constructor (firstName, lastName, age, students) {
+//         super(firstName, lastName, age);
+//         this.students = students
+//     }
+//     averageStudentGrade() {
+//         let sum = 0
+//         for (let i = 0; i < this.students.length; i++) {
+//             sum += this.students[i];
+//         }
+//         let avg = sum/this.students.length;
+//         return avg;
+//     }
+//     getInfo() {
+//         return super.getInfo() + ` and their average grade is ${this.averageStudentGrade()}`;
+
+// }
+// };
+
+// let myTeacher = new Teacher("Alex","Burgess", 21, [
+//     new Student("John", "loyd", 56, [40, 67, 29, 90]),
+//     new Student("Parker", "Peter", 23, [90, 24, 45, 67, 78]),
+//     new Student("Joey", "Salvador", 29, [90, 91, 70, 99])]);
+
+// console.log(myTeacher);
+// console.log(myTeacher.getInfo())
+
+/* 8 Override the getInfo method for Teacher so that it also displays the average grade of their students. Make sure to include a call to super.getInfo */
 class Person {
     constructor(firstName, lastName, age) {
         this.firstName = firstName;
@@ -218,12 +280,9 @@ class Teacher extends Person {
 };
 
 let myTeacher = new Teacher("Alex","Burgess", 21, [
-    new Student("John", "loyd", 56, [40, 67, 29, 90]),
+    new Student("John", "loyd", 24, [40, 67, 29, 90]),
     new Student("Parker", "Peter", 23, [90, 24, 45, 67, 78]),
     new Student("Joey", "Salvador", 29, [90, 91, 70, 99])]);
 
-console.log(myTeacher);
+// console.log(myTeacher);
 console.log(myTeacher.getInfo())
-
-/* 8 Override the getInfo method for Teacher so that it also displays the average grade of their students. Make sure to include a call to super.getInfo */
-

@@ -50,4 +50,6 @@ const getRandomFamilyName = function () {
     return RANDOM_LAST_NAMES[Math.floor(Math.random() * RANDOM_LAST_NAMES.length)];
 }
 
-console.log(Person.generateRandomPeople(5));
+console.log(Person.generateRandomPeople(100));
+
+/* Extra daily challenge extend the Person class to the children so that the override depicts random grades and random children. */
