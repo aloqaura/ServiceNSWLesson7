@@ -240,7 +240,7 @@ class Person {
 
 class Student extends Person {
     constructor(firstName, lastName, age, grades) {
-        super (firstName, lastName, age);
+        super(firstName, lastName, age);
         this.grades = grades;
     }
 
@@ -252,37 +252,41 @@ class Student extends Person {
         let avg = sum/this.grades.length;
         return avg;
     }
-    getInfo() {
-        return super.getInfo() + ` and their average grade is ${this.averageGrade()}`;
-    }
-    }
+
+getInfo() {
+    return super.getInfo() + ` and their average grade is ${this.averageGrade()}`;
+}
+}
 
 let grades = [90, 24, 45, 67, 78];
 let grade = new Student("Alex", "Burgess", 21, grades);
 
 class Teacher extends Person {
-    constructor (firstName, lastName, age, students) {
+    constructor(firstName, lastName, age, students) {
         super(firstName, lastName, age);
         this.students = students
     }
     averageStudentGrade() {
         let sum = 0
         for (let i = 0; i < this.students.length; i++) {
+            let student = this.students[i]
             sum += this.students[i];
         }
-        let avg = sum/this.students.length;
+        let avg = sum / students.averageGrade();
         return avg;
     }
     getInfo() {
-        return super.getInfo() + ` and their average grade is ${this.averageStudentGrade()}`;
+        return `${super.getInfo()} and their average grade is ${this.averageStudentGrade()}`;
 
-}
+    }
 };
 
-let myTeacher = new Teacher("Alex","Burgess", 21, [
+let students = [
     new Student("John", "loyd", 24, [40, 67, 29, 90]),
     new Student("Parker", "Peter", 23, [90, 24, 45, 67, 78]),
-    new Student("Joey", "Salvador", 29, [90, 91, 70, 99])]);
+    new Student("Joey", "Salvador", 29, [90, 91, 70, 99])];
+
+let myTeacher = new Teacher("Alex", "Burgess", 21, students);
 
 // console.log(myTeacher);
 console.log(myTeacher.getInfo())

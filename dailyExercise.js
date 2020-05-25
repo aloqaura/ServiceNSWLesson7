@@ -53,3 +53,4 @@ const getRandomFamilyName = function () {
 console.log(Person.generateRandomPeople(100));
 
 /* Extra daily challenge extend the Person class to the children so that the override depicts random grades and random children. */
+
